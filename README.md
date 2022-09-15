@@ -26,13 +26,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map: applies a set of rules to the dataset and returns a new array. You could use .map to double elements, reformat objects, or convert strings in an array (really anything that you might want to apply to all elements).
+
+.reduce: simplifies an array down to a single and returns a new array. .reduce could be used to get the sum of all values in an array or sum particular values in an object array .
+
+.filter: goes through all items in an array and returns only the values we want in a new array. This is achieved by putting each item through a 'truth test' based on your criteria and only returning the elements that pass. .filter is useful for making a subset of a larger group of data. For example, it could be used to remove duplicate values, return values over a given threshold, or return elements that contain a specific string.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback function is passed into another function as a parameter, while a higher order function takes in another function as a parameter. A higher order function takes in and uses a callback function.
 
 3. Explain what a closure is.
 
+A closure describes a function that references variables or other functions outside its scope as well as the variables or functions referenced. A closure gives you access to an outer function's scope from an inner function.
+
 4. Describe the four principles of the 'this' keyword.
 
+Window/Global binding: when 'this' does not have a particular context, it grabs things from the global context
+Implicit binding: uses dot syntax to tell 'this' keyword to search within the object referenced to the left of the 'dot' for context. (It is implied that if you're using a method on an object, that's the object 'this' should apply to).
+Explicit binding: context for 'this' is not provided within the object, but a call or apply method is used to connect it with the desired object
+New binding: 'this' binds to each new object created using a constructor function.
+
 5. Why do we need super() in an extended class?
+
+super() tells a constructor function to use the same attributes as the parent constructor function referenced using 'extends'. It replaces the use of Object.create() to create inheritance.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
