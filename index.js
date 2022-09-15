@@ -214,14 +214,18 @@ const newCuboid = new CuboidMaker({
   height: 3
 });
 
-console.log(newCuboid);
+// console.log(newCuboid);
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   💡 NOTE: Formula for cuboid volume: length * width * height   
 */
+CuboidMaker.prototype.volume = function() {
+  return this.length * this.width * this.height;
+};
 
+console.log(newCuboid.volume());
 
 
 
@@ -230,6 +234,11 @@ console.log(newCuboid);
   💡 NOTE: Formula for cuboid surface area: 2 * (length * width + length * height + width * height)  
 */
 
+CuboidMaker.prototype.surfaceArea = function() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
+
+console.log(newCuboid.surfaceArea());
 
 
 
