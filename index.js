@@ -93,7 +93,7 @@ const zooAnimals = [
     });
     return namesLowerCase;
   };
-  console.log(lowerCaseNames(zooAnimals));
+  //console.log(lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -103,9 +103,13 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function lowPopulationAnimals(zooAnimalsCB){
+    const lowPop = zooAnimalsCB.filter((animal) => {
+      return animal.population < 5;
+    });
+    return lowPop;
+  };
+//console.log(lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
